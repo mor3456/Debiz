@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %>- Debiz</title>
+    <asp:PlaceHolder runat="server"></asp:PlaceHolder>
+
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body style="background-image:url(../Images/bg.jpg)">
+    <form runat="server">
+        <header>
+            <a href="Default.aspx">homepage</a> &nbsp&nbsp&nbsp
+            <a href="Soccer.aspx">soccer</a> &nbsp&nbsp&nbsp
+        </header>
+        <div id="body">
+            <center>
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+            </center>
+        </div>
+        <footer>
+            <div>
+                Debiz Inc.
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
